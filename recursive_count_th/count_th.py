@@ -8,9 +8,7 @@ def count_th(word):
     string_count = len(string)
     if len(word) < string_count:
         return 0
-    # if len(word) == 0:
-    #     return 0
-    elif word[0: string_count] == string:
+    if word[0: string_count] == string:
         return count_th(word[string_count - 1: ]) + 1
     else:
         return count_th(word[string_count - 1: ])
